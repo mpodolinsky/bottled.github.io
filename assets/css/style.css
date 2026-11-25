@@ -1,0 +1,33 @@
+/* ASIMF project page. Plain CSS, no build step. Same palette and layout as the VLA-Tug page: shades of one hue around rgb(230, 230, 255). */
+:root {
+  --tint: rgb(230, 230, 255);
+  --bg: #ffffff;
+  --ink: #1c1c4a;
+  --ink-soft: #505082;
+  --accent: #3d3dab;
+  --line: #cfcfee;
+  --radius: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --tint: #23234f; --bg: #12122a; --ink: rgb(230, 230, 255); --ink-soft: #b3b3dd; --accent: #a9a9ff; --line: #34345f; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+img { max-width: 100%; height: auto; display: block; }
+.wrap { width: min(1100px, 100% - 32px); margin-inline: auto; }
+
+.hero { padding: 72px 0 40px; text-align: center; background: linear-gradient(180deg, var(--tint), var(--bg)); }
+.hero h1 { margin: 0 0 12px; line-height: 1.15; }
+.wordmark { display: block; font-size: clamp(3rem, 9vw, 5.6rem); font-weight: 900; letter-spacing: .02em; color: var(--accent); line-height: 1.1; }
+.title { display: block; font-size: clamp(1.2rem, 2.6vw, 1.9rem); font-weight: 600; margin-top: 6px; }
+.title b { color: var(--accent); font-weight: 800; }
+.authors { list-style: none; padding: 0; margin: 26px 0 4px; display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 22px; font-size: 1.1rem; }
+.affiliation { margin: 0; font-size: .92rem; color: var(--ink-soft); }
+
+.teaser { padding: 8px 0 64px; }
+.lede { text-align: center; max-width: 42em; margin: 0 auto 28px; color: var(--ink-soft); }
+.figure { margin: 0 auto; max-width: 1100px; }
+.figure img { width: 100%; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
+
+.footer { padding: 24px 0 40px; text-align: center; color: var(--ink-soft); font-size: .92rem; border-top: 1px solid var(--line); }
+.footer p { margin: 0; }

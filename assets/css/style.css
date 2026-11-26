@@ -1,15 +1,15 @@
-/* Bottled project page. Plain CSS, no build step. Same palette and layout as the VLA-Tug page: shades of one hue around rgb(230, 230, 255). */
+/* Bottled project page. Plain CSS, no build step. Layout as the VLA-Tug page; palette: shades of one hue (deep burgundy) around rgb(251, 232, 238). */
 :root {
-  --tint: rgb(230, 230, 255);
+  --tint: rgb(251, 232, 238);
   --bg: #ffffff;
-  --ink: #1c1c4a;
-  --ink-soft: #505082;
-  --accent: #3d3dab;
-  --line: #cfcfee;
+  --ink: #3b0b1b;
+  --ink-soft: #84505f;
+  --accent: #6b0f2a;
+  --line: #ecc7d2;
   --radius: 10px;
 }
 @media (prefers-color-scheme: dark) {
-  :root { --tint: #23234f; --bg: #12122a; --ink: rgb(230, 230, 255); --ink-soft: #b3b3dd; --accent: #a9a9ff; --line: #34345f; }
+  :root { --tint: #3a1020; --bg: #1c0c14; --ink: rgb(251, 232, 238); --ink-soft: #d9aebb; --accent: #e58aa5; --line: #55202f; }
 }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }

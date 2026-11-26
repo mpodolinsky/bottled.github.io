@@ -17,7 +17,10 @@
     const c = time % CYCLE;
     const storm = bump((c - 2.0) / 3.0);                 // 0 .. 1 .. 0
     const A = 2.4 + 5.5 * storm;                         // wave height
-    const phase = time * (2.0 + 1.6 * storm);
+    // the wave phase is the integral of the wave speed (2.0 rad/s, up to 3.6 in the storm); multiplying the absolute
+    // time by a varying speed made every cycle faster than the last
+    const x = Math.min(1, Math.max(0, (c - 2.0) / 3.0));
+    const phase = Math.floor(time / CYCLE) * (2.0 * CYCLE + 1.6 * 1.5) + 2.0 * c + 1.6 * 3.0 * (x / 2 - Math.sin(2 * Math.PI * x) / (4 * Math.PI));
     let d = `M 0 270 L 0 ${BASE + A * Math.sin(phase)}`;
     for (let x = 4; x <= 200; x += 4) d += ` L ${x} ${(BASE + A * Math.sin(K * x + phase)).toFixed(2)}`;
     water.setAttribute("d", d + " L 200 270 Z");

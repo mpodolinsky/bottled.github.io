@@ -1,4 +1,4 @@
-/* Bottled project page. Plain CSS, no build step. Layout as the VLA-Tug page; palette: shades of one hue (deep burgundy) around rgb(251, 232, 238). */
+/* Bottled project page. Plain CSS, no build step. Palette: shades of one hue (deep burgundy) around rgb(251, 232, 238). */
 :root {
   --tint: rgb(251, 232, 238);
   --bg: #ffffff;

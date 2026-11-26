@@ -17,8 +17,21 @@ img { max-width: 100%; height: auto; display: block; }
 .wrap { width: min(1100px, 100% - 32px); margin-inline: auto; }
 
 .hero { padding: 72px 0 40px; text-align: center; background: linear-gradient(180deg, var(--tint), var(--bg)); }
-.hero h1 { margin: 0 0 12px; line-height: 1.15; }
-.wordmark { display: block; font-size: clamp(3rem, 9vw, 5.6rem); font-weight: 900; letter-spacing: -.01em; color: var(--accent); line-height: 1.1; }
+.hero-head { display: flex; align-items: center; justify-content: center; gap: clamp(20px, 4vw, 48px); }
+.logo { flex: 0 0 auto; width: clamp(120px, 16vw, 200px); height: auto; overflow: visible; }
+.logo path, .logo rect { stroke-linecap: round; stroke-linejoin: round; }
+.glass { fill: color-mix(in srgb, var(--tint) 55%, transparent); stroke: var(--accent); stroke-width: 4; }
+.cork { fill: var(--accent); }
+.water { fill: color-mix(in srgb, var(--accent) 38%, transparent); }
+.hull { fill: var(--accent); }
+.mast { stroke: var(--accent); stroke-width: 3; fill: none; }
+.sail { fill: var(--bg); stroke: var(--accent); stroke-width: 3; }
+.cloud path { fill: var(--ink-soft); }
+.cloud .bolt { fill: #f5c542; opacity: 0; }
+.hero h1 { margin: 0; line-height: 1.15; text-align: left; }
+.ch { display: inline-block; will-change: transform; }
+@media (max-width: 700px) { .hero-head { flex-direction: column; } .hero h1 { text-align: center; } }
+.wordmark { display: block; white-space: nowrap; font-size: clamp(3rem, 9vw, 5.6rem); font-weight: 900; letter-spacing: -.01em; color: var(--accent); line-height: 1.1; }
 .title { display: block; font-size: clamp(1.2rem, 2.6vw, 1.9rem); font-weight: 600; margin-top: 6px; }
 .title b { color: var(--accent); font-weight: 800; }
 .authors { list-style: none; padding: 0; margin: 26px 0 4px; display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 22px; font-size: 1.1rem; }
@@ -31,3 +44,4 @@ img { max-width: 100%; height: auto; display: block; }
 
 .footer { padding: 24px 0 40px; text-align: center; color: var(--ink-soft); font-size: .92rem; border-top: 1px solid var(--line); }
 .footer p { margin: 0; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

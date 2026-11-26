@@ -13,15 +13,30 @@
   <meta property="og:image" content="assets/img/bottled_flow.gif">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/main.js" defer></script>
 </head>
 <body>
 <main>
   <section class="hero">
     <div class="wrap">
-      <h1>
-        <span class="wordmark">Bottled</span>
-        <span class="title">An agentic simulation framework</span>
-      </h1>
+      <div class="hero-head">
+        <svg class="logo" viewBox="0 0 200 270" role="img" aria-label="A small sailing ship in a corked bottle, riding waves while a storm gathers">
+          <defs><clipPath id="inside"><path d="M88 80 C88 100 38 104 38 136 V232 a24 24 0 0 0 24 24 H138 a24 24 0 0 0 24 -24 V136 C162 104 112 100 112 80 Z"/></clipPath></defs>
+          <path class="glass" d="M88 40 V80 C88 100 38 104 38 136 V232 a24 24 0 0 0 24 24 H138 a24 24 0 0 0 24 -24 V136 C162 104 112 100 112 80 V40"/>
+          <g clip-path="url(#inside)">
+            <g class="cloud"><path d="M72 122 a12 12 0 0 1 12 -12 a14 14 0 0 1 26 2 a11 11 0 0 1 8 10 z"/><path class="bolt" d="M98 124 l-8 16 h7 l-4 14 l13 -19 h-8 l5 -11 z"/></g>
+            <path class="water" d=""/>
+            <g class="ship" transform="translate(100 209)"><path class="hull" d="M-24 -9 H24 L16 3 H-16 Z"/><path class="mast" d="M0 -9 V-58"/><path class="sail" d="M3 -56 L24 -14 H3 Z"/><path class="sail" d="M-3 -46 L-18 -14 H-3 Z"/></g>
+          </g>
+          <rect class="cork" x="80" y="16" width="40" height="26" rx="5"/>
+        </svg>
+        <h1>
+          <span class="visually-hidden">Bottled: </span>
+          <span class="wordmark" aria-hidden="true"><span class="ch">B</span><span class="ch">o</span><span class="ch">t</span><span class="ch">t</span><span class="ch">l</span><span class="ch">e</span><span class="ch">d</span></span>
+          <span class="title">An agentic simulation framework</span>
+        </h1>
+      </div>
+
       <ul class="authors">
         <li>Michal P. Podolinsky</li>
         <li>Ufuk Topcu</li>

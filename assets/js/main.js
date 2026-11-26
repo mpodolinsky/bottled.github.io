@@ -31,8 +31,9 @@
     const flash = [3.4, 3.75].some((t0) => c > t0 && c < t0 + 0.1);
     bolt.style.opacity = flash ? 1 : 0;
     // the letters float on the same waves
+    // (a steady, slow swell: the letters do not speed up with the storm, they only heave a little higher)
     letters.forEach((el, i) => {
-      el.style.transform = `translateY(${(-0.045 * (0.5 + storm * 1.4) * Math.sin(phase * 0.9 - i * 0.85)).toFixed(4)}em)`;
+      el.style.transform = `translateY(${(-0.045 * (0.5 + 0.6 * storm) * Math.sin(time * 1.1 - i * 0.7)).toFixed(4)}em)`;
     });
   };
 
